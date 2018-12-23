@@ -1,0 +1,4 @@
+bin/*
+config/*
+basic-network/config/*
+basic-network/crypto-config/*
