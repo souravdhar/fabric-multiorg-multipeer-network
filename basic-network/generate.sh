@@ -32,14 +32,14 @@ fi
 # generate channel configuration transaction
 configtxgen -profile OrgChannel1 -outputCreateChannelTx ./config/channel1.tx -channelID $CHANNEL_NAME1
 if [ "$?" -ne 0 ]; then
-  echo "Failed to generate channel configuration transaction..."
+  echo "Failed to generate channel 1 configuration transaction..."
   exit 1
 fi
 
 # generate channel configuration transaction
 configtxgen -profile OrgChannel2 -outputCreateChannelTx ./config/channel2.tx -channelID $CHANNEL_NAME2
 if [ "$?" -ne 0 ]; then
-  echo "Failed to generate channel configuration transaction..."
+  echo "Failed to generate channel 2 configuration transaction..."
   exit 1
 fi
 
@@ -53,7 +53,7 @@ fi
 # generate anchor peer transaction
 configtxgen -profile OrgChannel1 -outputAnchorPeersUpdate ./config/Org2MSPanchors.tx -channelID $CHANNEL_NAME1 -asOrg Org2MSP
 if [ "$?" -ne 0 ]; then
-  echo "Failed to generate anchor peer update for Org1MSP..."
+  echo "Failed to generate anchor peer update for Org2MSP..."
   exit 1
 fi
 
@@ -67,6 +67,6 @@ fi
 # generate anchor peer transaction
 configtxgen -profile OrgChannel2 -outputAnchorPeersUpdate ./config/Org3MSPanchors.tx -channelID $CHANNEL_NAME2 -asOrg Org3MSP
 if [ "$?" -ne 0 ]; then
-  echo "Failed to generate anchor peer update for Org1MSP..."
+  echo "Failed to generate anchor peer update for Org3MSP..."
   exit 1
 fi
