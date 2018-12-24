@@ -1,4 +1,4 @@
-# fabric-multiorg-multipeer-network setup (without TLS) ... In progress
+# fabric-multiorg-multipeer-network setup (without TLS)
 
 Clone this repo to a directory. cd to that repo directory [fabric-multiorg-multipeer-network] and do the necessary prerequisites as following.
 
