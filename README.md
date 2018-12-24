@@ -47,5 +47,12 @@ Once above configuration is done then run following shell script to the network 
 
      ./start.sh
 
-In progress : two chaincode installation in two different private channels ...
+## Chaincode deployment
+
+Chaincode is written in [golang] and in [chaincode] directory. Check [volumes] section of [cli] service in [docker-compose.yaml] file for chaincode reference. Run fillowing command to install, instantiate and invoke [purchaseorderchaincode] and [shipmentchaincode] in mychannel1 and mychannel2 respectively.
+
+     cd ../fabric-example
+     ./deploy-chaincode.sh
+
+
 
